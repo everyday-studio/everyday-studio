@@ -1,0 +1,108 @@
+# ==========================================
+# Astro Framework & Node.js
+# ==========================================
+node_modules/
+dist/
+dist-ssr/
+.astro/
+
+# Package manager logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# pnp
+.pnp
+.pnp.js
+.pnp.cjs
+
+# ==========================================
+# Environment Variables
+# ==========================================
+.env
+.env.production
+.env.development
+.env.test
+.env.local
+.env.*.local
+!.env.example
+!.env.template
+
+# ==========================================
+# macOS (OS dependencies)
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ==========================================
+# Windows (OS dependencies)
+# ==========================================
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.cab
+*.msi
+*.msm
+*.msp
+$RECYCLE.BIN/
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Docker
+# ==========================================
+.docker/
+
+# ==========================================
+# Build / Temp Files
+# ==========================================
+.temp/
+.tmp/
+tmp/
+coverage/
+.nyc_output/
+
+# ==========================================
+# AI Agents & Workflows
+# ==========================================
+.agents/
+.agent/
+_agents/
+_agent/
