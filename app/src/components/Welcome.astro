@@ -1,210 +1,135 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+<!-- Header / Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+	<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+		<a href="/" class="flex items-center gap-3">
+			<img src="/logo.svg" alt="Everyday Studio" class="h-8 w-8" />
+			<span class="text-lg font-bold text-navy">Everyday Studio</span>
+		</a>
+		<div class="hidden items-center gap-8 md:flex">
+			<a href="#about" class="text-sm text-gray-600 transition-colors hover:text-teal">소개</a>
+			<a href="#services" class="text-sm text-gray-600 transition-colors hover:text-teal">서비스</a>
+			<a href="#contact" class="text-sm text-gray-600 transition-colors hover:text-teal">문의</a>
+		</div>
+	</nav>
+</header>
 
-	<a href="https://astro.build/blog/astro-6-beta/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 6.0?</h2>
-		<p>
-			Redesigned dev server, fonts, live collections, built-in CSP support, and more! Click to
-			explore Astro 6.0's new features.
+<!-- Hero Section -->
+<section class="flex min-h-screen flex-col items-center justify-center px-6 pt-20 text-center">
+	<div class="mb-8">
+		<img src="/logo.svg" alt="Everyday Studio Logo" class="mx-auto h-32 w-32 md:h-40 md:w-40" />
+	</div>
+	<h1 class="mb-4 text-4xl font-bold text-navy md:text-5xl lg:text-6xl">
+		매일의 아이디어를<br />현실로 만듭니다
+	</h1>
+	<p class="mb-8 max-w-2xl text-lg text-gray-500 md:text-xl">
+		Everyday Studio는 다양한 웹 서비스를 만들고 운영하는 크리에이티브 스튜디오입니다.
+	</p>
+	<div class="inline-block rounded-full bg-teal/10 px-4 py-2 text-sm font-medium text-teal">
+		*.everydaystudio.xyz
+	</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-gray-50 px-6 py-24">
+	<div class="mx-auto max-w-4xl text-center">
+		<h2 class="mb-6 text-3xl font-bold text-navy md:text-4xl">About Us</h2>
+		<p class="mb-8 text-lg leading-relaxed text-gray-600">
+			우리는 일상 속 작은 아이디어에서 출발하여, 사람들에게 가치를 전달하는 서비스를 만듭니다.
+			기술과 디자인의 균형을 추구하며, 매일 조금씩 더 나은 경험을 만들어갑니다.
 		</p>
-	</a>
-</div>
+		<div class="grid gap-8 md:grid-cols-3">
+			<div class="rounded-2xl bg-white p-6 shadow-sm">
+				<div class="mb-4 text-3xl">🎨</div>
+				<h3 class="mb-2 text-lg font-semibold text-navy">디자인</h3>
+				<p class="text-sm text-gray-500">사용자 중심의 직관적이고 아름다운 인터페이스</p>
+			</div>
+			<div class="rounded-2xl bg-white p-6 shadow-sm">
+				<div class="mb-4 text-3xl">⚡</div>
+				<h3 class="mb-2 text-lg font-semibold text-navy">기술</h3>
+				<p class="text-sm text-gray-500">최신 웹 기술로 빠르고 안정적인 서비스 구현</p>
+			</div>
+			<div class="rounded-2xl bg-white p-6 shadow-sm">
+				<div class="mb-4 text-3xl">🚀</div>
+				<h3 class="mb-2 text-lg font-semibold text-navy">성장</h3>
+				<p class="text-sm text-gray-500">지속적인 개선과 발전을 통한 가치 창출</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+<!-- Services Section -->
+<section id="services" class="px-6 py-24">
+	<div class="mx-auto max-w-4xl">
+		<h2 class="mb-12 text-center text-3xl font-bold text-navy md:text-4xl">Services</h2>
+		<div class="grid gap-6 md:grid-cols-3">
+			<!-- OLLM - Live -->
+			<a
+				href="https://ollm.everydaystudio.xyz"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="group relative overflow-hidden rounded-2xl border border-gray-200 p-6 transition-all hover:border-teal hover:shadow-lg"
+			>
+				<div class="mb-3 flex items-center gap-2">
+					<span class="inline-block h-2 w-2 rounded-full bg-teal animate-pulse"></span>
+					<span class="text-xs font-medium text-teal">Live</span>
+				</div>
+				<h3 class="mb-2 text-xl font-bold text-navy">OLLM</h3>
+				<p class="text-sm text-gray-500">ollm.everydaystudio.xyz</p>
+			</a>
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
+			<!-- Coming Soon 1 -->
+			<div class="relative overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 p-6">
+				<div class="mb-3 flex items-center gap-2">
+					<span class="inline-block h-2 w-2 rounded-full bg-mustard"></span>
+					<span class="text-xs font-medium text-mustard">Coming Soon</span>
+				</div>
+				<h3 class="mb-2 text-xl font-bold text-gray-300">???</h3>
+				<p class="text-sm text-gray-400">준비 중입니다</p>
+			</div>
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
+			<!-- Coming Soon 2 -->
+			<div class="relative overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 p-6">
+				<div class="mb-3 flex items-center gap-2">
+					<span class="inline-block h-2 w-2 rounded-full bg-mustard"></span>
+					<span class="text-xs font-medium text-mustard">Coming Soon</span>
+				</div>
+				<h3 class="mb-2 text-xl font-bold text-gray-300">???</h3>
+				<p class="text-sm text-gray-400">준비 중입니다</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
+<!-- Contact Section -->
+<section id="contact" class="bg-navy px-6 py-24 text-white">
+	<div class="mx-auto max-w-4xl text-center">
+		<h2 class="mb-6 text-3xl font-bold md:text-4xl">Contact</h2>
+		<p class="mb-8 text-lg text-gray-300">
+			프로젝트 문의나 협업 제안은 언제든 환영합니다.
+		</p>
+		<a
+			href="mailto:everydaystudio365@gmail.com"
+			class="inline-flex items-center gap-2 rounded-full bg-teal px-8 py-3 font-medium text-white transition-colors hover:bg-teal-dark"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+				<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+			</svg>
+			everydaystudio365@gmail.com
+		</a>
+	</div>
+</section>
 
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>
+<!-- Footer -->
+<footer class="border-t border-gray-100 px-6 py-8">
+	<div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
+		<div class="flex items-center gap-2">
+			<img src="/logo.svg" alt="Everyday Studio" class="h-6 w-6" />
+			<span class="text-sm font-semibold text-navy">Everyday Studio</span>
+		</div>
+		<p class="text-sm text-gray-400">&copy; 2025 Everyday Studio. All rights reserved.</p>
+	</div>
+</footer>
