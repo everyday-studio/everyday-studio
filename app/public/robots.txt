@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://everydaystudio.xyz/sitemap-index.xml
